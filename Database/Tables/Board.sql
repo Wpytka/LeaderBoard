@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Board]
+(
+	[Id] INT NOT NULL IDENTITY PRIMARY KEY,
+	[OwnerId] INT NOT NULL,
+	[BoardName] NVARCHAR (1000) NOT NULL,
+	[CreationDate] DATETIME NOT NULL,
+	CONSTRAINT FK_Owner FOREIGN KEY ([OwnerId]) REFERENCES [dbo].[User](Id)
+)
